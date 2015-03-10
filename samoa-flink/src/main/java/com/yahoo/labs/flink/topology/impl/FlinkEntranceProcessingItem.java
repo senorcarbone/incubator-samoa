@@ -90,7 +90,7 @@ public class FlinkEntranceProcessingItem extends AbstractEntranceProcessingItem
 
 	@Override
 	public int getComponentId() {
-		return -1; // dummy number shows that it cones from an Entrance PI
+		return -1; // dummy number shows that it comes from an Entrance PI
 	}
 
 	@Override
