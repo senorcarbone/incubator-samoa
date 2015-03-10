@@ -62,10 +62,15 @@ public class FlinkEntranceProcessingItem extends AbstractEntranceProcessingItem
 			}
 
 			@Override
-			public void invoke(Collector<SamoaType> collector) throws Exception {
+			public void run(Collector<SamoaType> collector) throws Exception {
 				while (entrProc.hasNext()) {
 					collector.collect(SamoaType.of(entrProc.nextEvent(), id));
 				}
+			}
+
+			@Override
+			public void cancel() {
+
 			}
 		},Utils.tempTypeInfo);
 
